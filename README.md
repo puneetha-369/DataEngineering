@@ -7,35 +7,35 @@
 # Question 2. Understanding Docker networking and docker-compose
 
 # Question 3. Trip Segmentation Count
-# Up to 1 mile
+    # Up to 1 mile
         SELECT COUNT(*) 
         FROM green_taxitrip
         WHERE trip_distance <=1
             AND CAST(lpep_pickup_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
             AND CAST(lpep_dropoff_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
 
-# In between 1 (exclusive) and 3 miles (inclusive)
+    # In between 1 (exclusive) and 3 miles (inclusive)
         SELECT COUNT(*) 
         FROM green_taxitrip
         WHERE trip_distance > 1 AND trip_distance <=3
             AND CAST(lpep_pickup_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
             AND CAST(lpep_dropoff_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
 
-# In between 3 (exclusive) and 7 miles (inclusive),
+    # In between 3 (exclusive) and 7 miles (inclusive),
         SELECT COUNT(*) 
         FROM green_taxitrip
         WHERE trip_distance > 3 AND trip_distance <=7
             AND CAST(lpep_pickup_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
             AND CAST(lpep_dropoff_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
 
-# In between 7 (exclusive) and 10 miles (inclusive),
+    # In between 7 (exclusive) and 10 miles (inclusive),
         SELECT COUNT(*) 
         FROM green_taxitrip
         WHERE trip_distance > 7 AND trip_distance <=10
             AND CAST(lpep_pickup_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
             AND CAST(lpep_dropoff_datetime as DATE) BETWEEN '2019-10-01' AND '2019-10-31'
 
-# Over 10 miles
+    # Over 10 miles
         SELECT COUNT(*) 
         FROM green_taxitrip
         WHERE trip_distance > 10
